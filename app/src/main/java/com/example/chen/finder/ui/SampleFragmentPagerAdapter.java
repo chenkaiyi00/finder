@@ -26,10 +26,10 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-       switch (position) {
-          case 0 :
-              return loginFragment.newInstance();
-          default:
+        switch (position) {
+            case 0 :
+                return loginFragment.newInstance();
+            default:
                 return PageFragment.newInstance(position);
         }
 

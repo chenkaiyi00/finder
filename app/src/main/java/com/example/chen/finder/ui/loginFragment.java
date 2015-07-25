@@ -44,13 +44,11 @@ public class loginFragment extends Fragment {
     public    boolean inmain;
     public  boolean inlog;
     public   boolean insignup;
-    OnBackPressedListener mCallback;
-    public  interface OnBackPressedListener {
-        public void doBack();
-    }
+
+
     public static  loginFragment newInstance(){
-      return new loginFragment();
-  }
+        return new loginFragment();
+    }
 
     public loginFragment() {
         // Required empty public constructor
@@ -68,8 +66,8 @@ public class loginFragment extends Fragment {
 
         // Inflate the layout for this fragment
         final ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_login, container, false);
-        mainLayout=(RelativeLayout)rootView.findViewById(R.id.main_layout);
-        log_in= (Button)rootView.findViewById(R.id.login);
+        mainLayout = (RelativeLayout) rootView.findViewById(R.id.main_layout);
+        log_in = (Button)rootView.findViewById(R.id.login);
         sign_up=(Button)rootView.findViewById(R.id.signup);
         swipe=(Button)rootView.findViewById(R.id.swipe);
         inmain=true;
@@ -134,95 +132,90 @@ public class loginFragment extends Fragment {
             }
         });
 
-    sign_up.setOnClickListener(new View.OnClickListener() {
-        @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-        @Override
-        public void onClick(View v) {
-            sign_up.setVisibility(View.INVISIBLE);
-            log_in.setVisibility(View.INVISIBLE);
-            swipe.setVisibility(View.INVISIBLE);
-            WindowManager wm = (WindowManager) mainLayout.getContext().getSystemService(Context.WINDOW_SERVICE);
-            Display display = wm.getDefaultDisplay();
-            int width = (int) (display.getWidth() * 0.7);
-            //add first name EditText
-            firstname = new EditText(mainLayout.getContext());
-            firstname.setId(View.generateViewId());
-            RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(
-                    width,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT);
-            params1.setMargins(0, 50, 0, 0);
-            params1.addRule(RelativeLayout.CENTER_IN_PARENT);
-            params1.addRule(RelativeLayout.BELOW, R.id.logo_contatiner);
-            firstname.setHint("First name");
-            firstname.setTextSize(16);
-            mainLayout.addView(firstname, params1);//done first name
+        sign_up.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+            @Override
+            public void onClick(View v) {
+                sign_up.setVisibility(View.INVISIBLE);
+                log_in.setVisibility(View.INVISIBLE);
+                swipe.setVisibility(View.INVISIBLE);
+                WindowManager wm = (WindowManager) mainLayout.getContext().getSystemService(Context.WINDOW_SERVICE);
+                Display display = wm.getDefaultDisplay();
+                int width = (int) (display.getWidth() * 0.7);
+                //add first name EditText
+                firstname = new EditText(mainLayout.getContext());
+                firstname.setId(View.generateViewId());
+                RelativeLayout.LayoutParams params1 = new RelativeLayout.LayoutParams(
+                        width,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params1.setMargins(0, 50, 0, 0);
+                params1.addRule(RelativeLayout.CENTER_IN_PARENT);
+                params1.addRule(RelativeLayout.BELOW, R.id.logo_contatiner);
+                firstname.setHint("First name");
+                firstname.setTextSize(16);
+                mainLayout.addView(firstname, params1);//done first name
 
-            lastemame = new EditText(mainLayout.getContext());
-            lastemame.setId(View.generateViewId());
-            RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(
-                    width,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT);
-            params2.setMargins(0, 15, 0, 0);
-            params2.addRule(RelativeLayout.CENTER_IN_PARENT);
-            params2.addRule(RelativeLayout.BELOW, firstname.getId());
-            lastemame.setHint("Last name");
-            lastemame.setTextSize(16);
-            mainLayout.addView(lastemame, params2);//done last name
+                lastemame = new EditText(mainLayout.getContext());
+                lastemame.setId(View.generateViewId());
+                RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(
+                        width,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params2.setMargins(0, 15, 0, 0);
+                params2.addRule(RelativeLayout.CENTER_IN_PARENT);
+                params2.addRule(RelativeLayout.BELOW, firstname.getId());
+                lastemame.setHint("Last name");
+                lastemame.setTextSize(16);
+                mainLayout.addView(lastemame, params2);//done last name
 
-            Email = new EditText(mainLayout.getContext());
-            Email.setId(View.generateViewId());
-            RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(
-                    width,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT);
-            params3.setMargins(0, 15, 0, 0);
-            params3.addRule(RelativeLayout.CENTER_IN_PARENT);
-            params3.addRule(RelativeLayout.BELOW, lastemame.getId());
-            Email.setHint("Email");
-            Email.setTextSize(16);
-            mainLayout.addView(Email, params3);//done Email
+                Email = new EditText(mainLayout.getContext());
+                Email.setId(View.generateViewId());
+                RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(
+                        width,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params3.setMargins(0, 15, 0, 0);
+                params3.addRule(RelativeLayout.CENTER_IN_PARENT);
+                params3.addRule(RelativeLayout.BELOW, lastemame.getId());
+                Email.setHint("Email");
+                Email.setTextSize(16);
+                mainLayout.addView(Email, params3);//done Email
 
-            password_signup = new EditText(mainLayout.getContext());
-            password_signup.setId(View.generateViewId());
-            RelativeLayout.LayoutParams params4 = new RelativeLayout.LayoutParams(
-                    width,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT);
-            params4.setMargins(0, 15, 0, 0);
-            params4.addRule(RelativeLayout.CENTER_IN_PARENT);
-            params4.addRule(RelativeLayout.BELOW, Email.getId());
-            password_signup.setHint("Password");
-            password_signup.setTextSize(16);
-            mainLayout.addView(password_signup, params4);//done password_signup
-           insignup=true;
-            inmain=false;
-            inlog=false;
-        }
-    });
+                password_signup = new EditText(mainLayout.getContext());
+                password_signup.setId(View.generateViewId());
+                RelativeLayout.LayoutParams params4 = new RelativeLayout.LayoutParams(
+                        width,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+                params4.setMargins(0, 15, 0, 0);
+                params4.addRule(RelativeLayout.CENTER_IN_PARENT);
+                params4.addRule(RelativeLayout.BELOW, Email.getId());
+                password_signup.setHint("Password");
+                password_signup.setTextSize(16);
+                mainLayout.addView(password_signup, params4);//done password_signup
+                insignup=true;
+                inmain=false;
+                inlog=false;
+            }
+        });
         return  rootView;
     }
-    public void showmain(){
+    public void showmainfromloin(){
         sign_up.setVisibility(View.VISIBLE );
         log_in.setVisibility(View.VISIBLE );
         swipe.setVisibility(View.VISIBLE);
         username.setVisibility(View.INVISIBLE);
-         password.setVisibility(View.INVISIBLE);
-         firstname.setVisibility(View.INVISIBLE);
-         lastemame.setVisibility(View.INVISIBLE);
-          Email.setVisibility(View.INVISIBLE);
-         password_signup.setVisibility(View.INVISIBLE);
-         forgetpwd.setVisibility(View.INVISIBLE);
+        password.setVisibility(View.INVISIBLE);
+        forgetpwd.setVisibility(View.INVISIBLE);
+
     }
- public void showlog(){
-     forgetpwd.setVisibility(View.VISIBLE);
-     username.setVisibility(View.VISIBLE);
-     password.setVisibility(View.VISIBLE);
-     sign_up.setVisibility(View.INVISIBLE );
-     log_in.setVisibility(View.INVISIBLE );
-     swipe.setVisibility(View.INVISIBLE);
-     firstname.setVisibility(View.INVISIBLE);
-     lastemame.setVisibility(View.INVISIBLE);
-     Email.setVisibility(View.INVISIBLE);
-     password_signup.setVisibility(View.INVISIBLE);
- }
+    public void showmainfromsignup(){
+
+        sign_up.setVisibility(View.VISIBLE );
+        log_in.setVisibility(View.VISIBLE );
+        swipe.setVisibility(View.VISIBLE);
+        firstname.setVisibility(View.INVISIBLE);
+        lastemame.setVisibility(View.INVISIBLE);
+        Email.setVisibility(View.INVISIBLE);
+        password_signup.setVisibility(View.INVISIBLE);
+    }
     public void showsignup(){
         firstname.setVisibility(View.VISIBLE);
         lastemame.setVisibility(View.VISIBLE);
@@ -241,12 +234,7 @@ public class loginFragment extends Fragment {
         // activity is the container activity, here is main activity
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception
-        try {
-            mCallback = (OnBackPressedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnBackPressedListener");
-        }
+
     }
 
     @Override
