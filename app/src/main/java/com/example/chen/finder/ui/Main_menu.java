@@ -1,11 +1,9 @@
 package com.example.chen.finder.ui;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
 import com.example.chen.finder.R;
 
 public class Main_menu extends AppCompatActivity {
@@ -21,13 +19,24 @@ public class Main_menu extends AppCompatActivity {
     private static final int SETTINGS=4;
     private static final int DEFAULT=0;
     public int curStance;
-    FragmentTransaction ft;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        if(savedInstanceState==null)
-            curStance=DEFAULT;
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container) != null){
+            // when first create the activity
+            // show the default fragment
+             if(savedInstanceState==null){
+                HomeFragment home= new HomeFragment();
+                 getSupportFragmentManager().beginTransaction()
+                         .add(R.id.fragment_container, home).commit();
+             }
+                //if we're being restored from a previous state,
+            // then we don't need to do anything
+        }
+
         homebtn=(TextView)findViewById(R.id.home);
         storebtn=(TextView)findViewById(R.id.store);
         combtn=(TextView)findViewById(R.id.community);
@@ -35,7 +44,6 @@ public class Main_menu extends AppCompatActivity {
         settingbtn=(TextView)findViewById(R.id.settings);
         final  View root = settingbtn.getRootView();
 
-        ft = getSupportFragmentManager().beginTransaction();// Begin the transaction
         settingbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +86,6 @@ public class Main_menu extends AppCompatActivity {
                 changeCurStanceColor(curStance);
                 curStance=HOME;
                 setFragView(curStance);
-                root.invalidate();
             }
         });
 
@@ -86,17 +93,31 @@ public class Main_menu extends AppCompatActivity {
 
     private void setFragView(int curstance) {
              switch (curstance) {
-            case HOME:.
-
-                ft.replace(R.id.main_page_fragment, new HomeFragment(),"home");
-                // Replace the contents of the container with the new fragment
-                ft.commit();
-                // Complete the changes added above\
+            case HOME:
+                HomeFragment home= new HomeFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, home).commit();
                 break;
             case SETTINGS:
+                SettingFragment setting= new SettingFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, setting).commit();
+                break;
             case STORE:
+                StoreFragment store= new StoreFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, store).commit();
+                break;
             case COMMUNITY:
+                CommunityFragment community= new CommunityFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, community).commit();
+                break;
             case ME:
+               MeFragment me= new MeFragment();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_container, me).commit();
+                break;
  }
     }
 

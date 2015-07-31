@@ -3,6 +3,7 @@ package com.example.chen.finder.ui;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
@@ -78,6 +79,8 @@ public class loginFragment extends Fragment {
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Main_menu.class);
+                startActivity(intent);
                 sign_up.setVisibility(View.INVISIBLE );
                 log_in.setVisibility(View.INVISIBLE );
                 swipe.setVisibility(View.INVISIBLE);
