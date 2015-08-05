@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.chen.finder.R;
+import com.example.chen.finder.objects.Like;
 import com.example.chen.finder.objects.Post;
 import com.example.chen.finder.util.HomeSetsViewAdapter;
 
@@ -64,22 +65,22 @@ public class HomeFragment extends Fragment  implements SwipeRefreshLayout.OnRefr
     }
     private ArrayList<Post> getThronesCharacters() {
         ArrayList<Post> items = new ArrayList<>();
-        items.add(new Post("Dany Targaryen", "Valyria"));
-        items.add(new Post("Rob Stark", "Winterfell"));
-        items.add(new Post("Jon Snow", "Castle Black"));
-        items.add(new Post("Tyrion Lanister", "King's Landing"));
-        items.add(new Post("Dany Targaryen", "Valyria"));
-        items.add(new Post("Rob Stark", "Winterfell"));
-        items.add(new Post("Jon Snow", "Castle Black"));
-        items.add(new Post("Tyrion Lanister", "King's Landing"));
-        items.add(new Post("Dany Targaryen", "Valyria"));
-        items.add(new Post("Rob Stark", "Winterfell"));
-        items.add(new Post("Jon Snow", "Castle Black"));
-        items.add(new Post("Tyrion Lanister", "King's Landing"));
-        items.add(new Post("Dany Targaryen", "Valyria"));
-        items.add(new Post("Rob Stark", "Winterfell"));
-        items.add(new Post("Jon Snow", "Castle Black"));
-        items.add(new Post("Tyrion Lanister", "King's Landing"));
+        items.add(new Post("Get the Look - Joan Smalls", "Valyria",new Like(20, false)));
+        items.add(new Post("Rob Stark", "Winterfell",new Like(20, false)));
+        items.add(new Post("Jon Snow", "Castle Black",new Like(20, false)));
+        items.add(new Post("Tyrion Lanister", "King's Landing",new Like(20, false)));
+        items.add(new Post("Dany Targaryen", "Valyria",new Like(20, false)));
+        items.add(new Post("Rob Stark", "Winterfell",new Like(20, false)));
+        items.add(new Post("Jon Snow", "Castle Black",new Like(20, false)));
+        items.add(new Post("Tyrion Lanister", "King's Landing",new Like(20, false)));
+        items.add(new Post("Dany Targaryen", "Valyria",new Like(20, false)));
+        items.add(new Post("Rob Stark", "Winterfell",new Like(20, false)));
+        items.add(new Post("Jon Snow", "Castle Black",new Like(20, false)));
+        items.add(new Post("Tyrion Lanister", "King's Landing",new Like(20, false)));
+        items.add(new Post("Dany Targaryen", "Valyria",new Like(20, false)));
+        items.add(new Post("Rob Stark", "Winterfell",new Like(20, false)));
+        items.add(new Post("Jon Snow", "Castle Black",new Like(20, false)));
+        items.add(new Post("Tyrion Lanister", "King's Landing",new Like(20, false)));
         return items;
     }
 

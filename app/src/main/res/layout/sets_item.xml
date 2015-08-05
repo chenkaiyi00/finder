@@ -1,30 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/selectableItemBackground">
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+        android:id="@+id/imageView"
+        android:src="@drawable/example_converted"
+        android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+            android:layout_below="@+id/imageView"
+            android:background="@color/white"
+         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Dennis"
+            android:id="@+id/tvTitile"
+            android:layout_marginLeft="20dp"
+            />
+
+        </LinearLayout>
+<RelativeLayout
+    android:id="@+id/user_info_container"
+    android:layout_height="35dp"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/title_container"
+    android:gravity="center"
+    android:background="@color/white"
+    >
+<ImageView
+    android:id="@+id/user_icon"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="20dp"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/saga"
+    android:clickable="true"
+ />
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/user_icon"
+        android:text="Winterfell"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:clickable="true"
+       />
+    <ImageView
+        android:id="@+id/like_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/like_count"
+        android:scaleType="centerCrop"
+        android:src="@drawable/likegrey"
+        android:clickable="true"
+       />
+    <TextView
+        android:id="@+id/like_count"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@+id/comment_button"
+        android:layout_marginRight="10dp"
+        android:text="20"
+        android:gravity="center"
+        android:clickable="true"
+
+      />
+    <ImageView
+        android:id="@+id/comment_button"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_toLeftOf="@+id/comment_count"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/comment"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+      />
+    <TextView
+        android:id="@+id/comment_count"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="15"
+        android:gravity="center"
+        android:clickable="true"
+
+        />
+    </RelativeLayout>
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/imageView"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center_vertical" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Dennis"
-        android:id="@+id/tvTitile"
-        android:layout_gravity="center_vertical" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Winterfell"
-        android:id="@+id/tvAuthor"
-        android:layout_marginLeft="10dp"
-        android:layout_gravity="center_vertical" />
-</LinearLayout>
+        android:id="@+id/blank"
+        android:layout_height="7dp"
+        android:layout_width="match_parent"
+       android:layout_alignBottom="@+id/user_info_container"
+        android:background="?android:colorBackground"/>
+</RelativeLayout>

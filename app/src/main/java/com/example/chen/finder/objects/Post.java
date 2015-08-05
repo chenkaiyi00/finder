@@ -6,9 +6,11 @@ package com.example.chen.finder.objects;
 public class Post {
     public String title;
     public String author;
-
-    public Post(String title,String author){
+    public Like like;
+    public Post(String title,String author,Like like){
         this.author=author;
         this.title=title;
+        this.like=like;
     }
+
 }
