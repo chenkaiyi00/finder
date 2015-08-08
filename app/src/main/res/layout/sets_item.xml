@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="@color/white"
     >
 
         <ImageView
@@ -40,17 +40,18 @@
     android:gravity="center"
     android:background="@color/white"
     >
-<ImageView
-    android:id="@+id/user_icon"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginLeft="20dp"
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:scaleType="centerCrop"
-    android:src="@drawable/saga"
-    android:clickable="true"
- />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/saga"
+        android:clickable="true"
+        />
+
     <TextView
         android:id="@+id/tvAuthor"
         android:layout_width="wrap_content"
@@ -66,7 +67,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_toLeftOf="@+id/like_count"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         android:src="@drawable/likegrey"
         android:clickable="true"
        />
@@ -104,10 +105,5 @@
         />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/blank"
-        android:layout_height="7dp"
-        android:layout_width="match_parent"
-       android:layout_alignBottom="@+id/user_info_container"
-        android:background="?android:colorBackground"/>
+
 </RelativeLayout>

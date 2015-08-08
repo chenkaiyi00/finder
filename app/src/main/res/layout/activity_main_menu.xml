@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-<FrameLayout
-    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true">
-    </FrameLayout>
+    android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/menubar"
         android:orientation="horizontal"
@@ -37,16 +32,16 @@
             android:layout_marginBottom="20dp"
             />
         <TextView
-        android:id="@+id/community"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
+            android:id="@+id/community"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
             android:paddingLeft="20dp"
-        android:clickable="true"
-        android:text="@string/community"
-        android:textSize="15sp"
-        android:textColor="@color/darkgray"
+            android:clickable="true"
+            android:text="@string/community"
+            android:textSize="15sp"
+            android:textColor="@color/darkgray"
             android:layout_marginBottom="20dp"
-        />
+            />
         <TextView
             android:id="@+id/me"
             android:layout_height="match_parent"
@@ -70,5 +65,12 @@
             android:layout_marginBottom="20dp"
             />
 
-        </LinearLayout>
+    </LinearLayout>
+<FrameLayout
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/menubar">
+    </FrameLayout>
+
 </RelativeLayout>

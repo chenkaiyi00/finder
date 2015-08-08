@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="@dimen/card_margin">
+
+    <!-- Main Content View -->
+    <LinearLayout
+        android:id="@+id/set_info_container"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical">
+   <LinearLayout
+       android:id="@+id/set_tittle_container"
+       android:layout_height="match_parent"
+       android:layout_width="match_parent"
+       android:layout_weight="1"
+       android:orientation="horizontal"
+
+       android:background="@color/white">
+     <TextView
+         android:id="@+id/set_tittle"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:textColor="@color/black"
+         android:layout_marginLeft="20dp"
+         android:text="this is tittle"
+         android:textSize="@dimen/abc_text_size_large_material"
+         android:gravity="center_vertical"
+        />
+       </LinearLayout
+           >
+        <LinearLayout
+            android:id="@+id/user_info_container"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_icon"
+                android:layout_marginLeft="20dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/saga"
+                android:gravity="center"
+                android:clickable="true"
+                />
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Winterfell"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:clickable="true"
+                />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="5 days ago"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:clickable="true"
+                />
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+          <LinearLayout
+              android:layout_height="match_parent"
+              android:layout_width="match_parent"
+              android:layout_weight="1"
+              android:orientation="horizontal"
+             android:gravity="center"
+              android:background="@color/white">
+              <ImageView
+                  android:id="@+id/like_button"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:scaleType="fitCenter"
+                  android:src="@drawable/likegrey"
+                  android:clickable="true"
+                  />
+              <TextView
+                  android:id="@+id/like_count"
+                  android:layout_height="match_parent"
+                  android:layout_width="wrap_content"
+                  android:layout_toLeftOf="@+id/comment_button"
+                  android:layout_marginRight="10dp"
+                  android:text="20"
+                  android:gravity="center"
+                  android:clickable="true"
+
+                  />
+              </LinearLayout>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/comment_button"
+                    android:layout_height="30dp"
+                    android:layout_width="30dp"
+                    android:src="@drawable/comment"
+                    android:scaleType="centerCrop"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="15"
+                    android:gravity="center"
+                    android:clickable="true"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/share"/>
+            </LinearLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

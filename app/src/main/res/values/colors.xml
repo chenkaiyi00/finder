@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="transparent_dark_slate_blue_ninty">#E63c5896</color>
     <color name="darkgray">#404040ff</color>
     <color name="black">#000000</color>
     <color name="red">#ff00ffff</color>

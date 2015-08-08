@@ -1,6 +1,8 @@
 package com.example.chen.finder.util;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chen.finder.R;
+import com.example.chen.finder.home.views.HomePostPagerActivity;
 import com.example.chen.finder.objects.Post;
 
 import java.util.ArrayList;
@@ -21,6 +24,8 @@ import java.util.ArrayList;
 // Create the basic adapter extending from RecyclerView.Adapter
 public class HomeSetsViewAdapter extends
         RecyclerView.Adapter<HomeSetsViewAdapter.ViewHolder> {
+    public  final static String PAR_KEY = "parce_post";
+
     // Store a member variable for the users
     private ArrayList<Post> posts;
     // Store the context for later use
@@ -47,10 +52,10 @@ public class HomeSetsViewAdapter extends
         return new HomeSetsViewAdapter.ViewHolder(itemView,context);
     }
 
+    //to set the view attributes based on the data
+    // Get the data model based on position
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        //to set the view attributes based on the data
-        // Get the data model based on position
         Post post = posts.get(position);
         // Set item views based on the data model
         holder.tvAuthor.setText(post.author);
@@ -67,11 +72,11 @@ public class HomeSetsViewAdapter extends
     public  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
-        public TextView tvTitile;
-        public TextView tvAuthor;
-        public ImageView like_button;
-        public TextView like_count;
-        public TextView comment_count;
+        private TextView tvTitile;
+        private TextView tvAuthor;
+        private ImageView like_button;
+        private TextView like_count;
+        private TextView comment_count;
         private Context context;
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
@@ -91,8 +96,15 @@ public class HomeSetsViewAdapter extends
         @Override
         public void onClick(View v) {
             int position = getLayoutPosition(); // gets item position
-            Post p =posts.get(position);
-            Toast.makeText(context, tvTitile.getText(), Toast.LENGTH_SHORT).show();
+            Post post =posts.get(position);
+            Intent intent = new Intent(context, HomePostPagerActivity.class);
+            Bundle mBundle = new Bundle();
+            mBundle.putParcelable(PAR_KEY, post);
+
+            intent.putExtras(mBundle);
+            context.startActivity(intent);
+
+          //  Toast.makeText(context, tvTitile.getText(), Toast.LENGTH_SHORT).show();
         }
     }
     private Context context;
