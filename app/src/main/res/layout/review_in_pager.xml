@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/shape_rectangle_background_top_nocolor">
+<TextView
+     android:id="@+id/num_of_comments"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="15dp"
+    android:gravity="center"
+    android:text="20 Reviews"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/product2"
+        android:gravity="center"
+        android:clickable="true"
+        />
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Sean"/>
+    <TextView
+        android:id="@+id/review_time"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="May 2015"/>
+
+    <TextView
+        android:id="@+id/revire_content"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Thanks for having us.Looking forword to the winter and possible horseback riding."/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="View All"
+        android:gravity="center"
+        android:background="@drawable/shape_view_all"
+        android:clickable="true"
+        />
+</LinearLayout>

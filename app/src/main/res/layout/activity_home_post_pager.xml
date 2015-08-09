@@ -25,12 +25,14 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.etiennelawlor.quickreturn.library.views.NotifyingScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
         android:id="@+id/nested_scrollView"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        >
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,13 +44,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-
-                >
-
                 <ImageView
                     android:id="@+id/pic_1"
                     android:layout_width="match_parent"
@@ -57,15 +52,6 @@
                     android:src="@drawable/pic1"
                     android:adjustViewBounds="true"
                     />
-
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-              >
-
 
                <ImageView
                 android:id="@+id/pic_2"
@@ -78,12 +64,6 @@
 
 
 
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               >
                     <ImageView
                         android:id="@+id/pic_3"
                         android:layout_width="match_parent"
@@ -92,12 +72,13 @@
                         android:src="@drawable/pic3"
                         android:adjustViewBounds="true"
                         />
-            </android.support.v7.widget.CardView>
 
-            <include layout="@layout/cardview_sets_info"/>
+
+            <include layout="@layout/linear_set_info"/>
             <include  layout="@layout/set_products"/>
+            <include  layout="@layout/set_products"/>
+            <include  layout="@layout/review_in_pager"/>
         </LinearLayout>
-
     </android.support.v4.widget.NestedScrollView>
 </com.etiennelawlor.quickreturn.library.views.NotifyingScrollView>
 
@@ -177,7 +158,6 @@
                 android:textSize="14sp"
                 app:textFont="Roboto_Bold" />
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

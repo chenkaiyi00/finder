@@ -20,8 +20,7 @@
        android:layout_width="match_parent"
        android:layout_weight="1"
        android:orientation="horizontal"
-
-       android:background="@color/white">
+       android:background="@drawable/shape_rectangle_background">
      <TextView
          android:id="@+id/set_tittle"
          android:layout_width="match_parent"
@@ -40,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="@color/white">
+            android:background="@drawable/shape_rectangle_background">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/user_icon"
@@ -50,6 +49,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/saga"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:clickable="true"
                 />
             <TextView
@@ -85,7 +85,7 @@
               android:layout_weight="1"
               android:orientation="horizontal"
              android:gravity="center"
-              android:background="@color/white">
+              android:background="@drawable/shape_rectangle_backgroung_left">
               <ImageView
                   android:id="@+id/like_button"
                   android:layout_width="30dp"
@@ -112,7 +112,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:background="@color/white">
+                android:background="@drawable/shape_rectangle_backgroung_left">
                 <ImageView
                     android:id="@+id/comment_button"
                     android:layout_height="30dp"
