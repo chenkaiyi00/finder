@@ -18,17 +18,22 @@
        >
         <ImageView
             android:id="@+id/pic"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/product1"
+            android:src="@drawable/product3"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
             />
           <TextView
               android:id="@+id/name"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_toRightOf="@+id/pic"
-              android:text="jacket :  XXXXXXXXXX"
+              android:text="jacket  : XXXXXXXXXX"
+              android:theme="@style/text_tittle_name"
               android:layout_marginTop="15dp"/>
         <TextView
             android:id="@+id/price"
@@ -36,8 +41,9 @@
             android:layout_width="wrap_content"
             android:layout_below="@+id/name"
             android:layout_toRightOf="@+id/pic"
-            android:text="$ 99"
-            android:layout_marginTop="15dp"
+            android:text="$  99"
+            android:layout_marginTop="10dp"
+            android:theme="@style/text_price"
             />
         <TextView
             android:id="@+id/old_price"
@@ -48,6 +54,8 @@
             android:text="$ 50"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="40dp"
+            android:visibility="gone"
+            android:theme="@style/text_time"
             />
 
     </RelativeLayout>

@@ -52,12 +52,9 @@ public class HomePostPagerActivity extends AppCompatActivity  {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        ButterKnife.inject(this);
-        int headerHeight = getResources().getDimensionPixelSize(R.dimen.facebook_header_height);
-        int footerHeight = getResources().getDimensionPixelSize(R.dimen.facebook_footer_height);
 
-        int headerTranslation = -headerHeight;
-        int footerTranslation = -footerHeight;
+        ButterKnife.inject(this);
+
         SpeedyQuickReturnScrollViewOnScrollChangedListener scrollListener;
 
         scrollListener = new SpeedyQuickReturnScrollViewOnScrollChangedListener.Builder(this, QuickReturnViewType.FOOTER)

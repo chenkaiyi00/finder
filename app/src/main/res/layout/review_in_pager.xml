@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+
     android:gravity="center"
     android:background="@drawable/shape_rectangle_background_top_nocolor">
 <TextView
@@ -12,6 +13,7 @@
     android:layout_width="match_parent"
     android:layout_marginTop="20dp"
     android:layout_marginBottom="15dp"
+    android:theme="@style/text_tittle_name"
     android:gravity="center"
     android:text="20 Reviews"/>
 
@@ -31,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="5dp"
         android:gravity="center"
+        android:theme="@style/text_tittle_name"
         android:text="Sean"/>
     <TextView
         android:id="@+id/review_time"
@@ -38,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="15dp"
         android:gravity="center"
+        android:theme="@style/text_time"
         android:text="May 2015"/>
 
     <TextView
@@ -47,13 +51,16 @@
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="15dp"
+        android:theme="@style/text_tittle_name"
         android:text="Thanks for having us.Looking forword to the winter and possible horseback riding."/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="View All"
+        android:theme="@style/viewall"
         android:gravity="center"
         android:background="@drawable/shape_view_all"
         android:clickable="true"
+        android:layout_marginBottom="15dp"
         />
 </LinearLayout>

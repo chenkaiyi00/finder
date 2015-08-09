@@ -2,6 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.chen.finder.home.views.HomePostPagerActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+
+
+    <item android:id="@+id/action_collect"
+        android:title="@string/Collect"
+        android:icon="@drawable/ic_action_action_loyalty"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_add_to_cart"
+        android:title="@string/add_to_cart"
+        android:icon="@drawable/ic_action_action_shopping_cart"
+        app:showAsAction="always" />
 </menu>

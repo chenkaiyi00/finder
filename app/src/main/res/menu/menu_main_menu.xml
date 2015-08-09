@@ -2,12 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.chen.finder.ui.Main_menu">
-    <item
-        android:id="@+id/shopping_cart"
-        android:icon="@drawable/shoppingcart"
-        app:showAsAction="ifRoom"
-        android:title="shoppingcart">
-    </item>
 
     <item android:id="@+id/action_settings"
 
