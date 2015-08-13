@@ -16,10 +16,18 @@
     <string name="settings">Settings</string>
     <string name="Collect">Collect</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="check_out_now">check out now</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main_menu">title_activity_main_menu</string>
     <string name="title_activity_home_post_pager">title_activity_home_post_pager</string>
+    <string name="title_activity_size_choose">size_choose</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_size_chooser_sets">size_chooser_sets</string>
+    <string name="title_activity_comment_ui">Comment_ui</string>
+    <string name="title_activity_myaccountui">Myaccountui</string>
+    <string name="title_activity_changepasswordui">Changepasswordui</string>
 </resources>

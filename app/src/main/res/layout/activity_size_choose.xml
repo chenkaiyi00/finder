@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shape_rectangle_background"
+            android:theme="@style/toolbar_style"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/size_choose_menubar"
+                android:layout_marginTop="56dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <include  layout="@layout/single_size_filter"/>
+                    <include  layout="@layout/single_size_filter"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/size_choose_menubar"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <RelativeLayout
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="3"
+     >
+                <TextView
+                    android:id="@+id/cur_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 99"
+                    />
+                <TextView
+                    android:id="@+id/old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cur_price"
+                    android:text="$ 199"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/add_to_cart"
+
+                android:paddingLeft="60dp"
+                android:clickable="true"
+                android:text="@string/add_to_cart"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/white"
+                android:theme="@style/size_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+            <TextView
+                android:id="@+id/check_out"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:theme="@style/size_color"
+                android:clickable="true"
+                android:text="@string/check_out_now"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </RelativeLayout>

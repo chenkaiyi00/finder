@@ -1,9 +1,165 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.example.chen.finder.ui.SettingFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chen.finder.ui.SettingFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+      >
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PROFILE"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:id="@+id/my_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_background"
+            android:clickable="true"
+            android:text="My Account"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:id="@+id/size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true"
+            android:text="Change My Size"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="this is settings" />
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PREFERENCES"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:id="@+id/ship_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_background"
+            android:clickable="true"
+            android:text="Shipping Adresses"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:id="@+id/pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true"
+            android:text="Payment Methods"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABOUT"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_background"
+            android:clickable="true"
+            android:text="Contact Us"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_background"
+            android:clickable="true"
+            android:text="Privacy Policy"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle_background"
+            android:clickable="true"
+            android:text="Terms of service"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true"
+            android:text="FAQ"
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:textFont="Roboto_Medium"/>
+        <com.example.chen.finder.viewhelper.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="SIGN OUT"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:background="@drawable/buttonshape_empty"
+
+            app:textFont="Roboto_Medium"/>
+    </LinearLayout>
+</ScrollView>
 
 </FrameLayout>

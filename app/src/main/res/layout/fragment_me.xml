@@ -2,8 +2,84 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.example.chen.finder.ui.MeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="this is me" />
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_stat_social_notifications_none"
+        android:clickable="true"/>
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/user_icon"
+              android:layout_width="70dp"
+              android:layout_height="70dp"
+              android:src="@drawable/product3"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="20dp"/>
+    <com.example.chen.finder.viewhelper.CustomFontTextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_icon"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Eric"/>
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/member_since"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:gravity="center"
+              android:text="Member Since August 2015"/>
+      </RelativeLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:background="@drawable/shape_rectangle_background">
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/My_loves_sets"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:text="My loves"/>
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/My_sets"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:text="My Sets"/>
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/My_order"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:text="Order"/>
+
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/My_cart"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:text="Shopping Cart"/>
+
+      </LinearLayout>
+      </LinearLayout>
+  </ScrollView>
+
 
 </FrameLayout>

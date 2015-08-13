@@ -19,7 +19,10 @@ import com.etiennelawlor.quickreturn.library.listeners.SpeedyQuickReturnScrollVi
 import com.etiennelawlor.quickreturn.library.views.NotifyingScrollView;
 import com.example.chen.finder.R;
 import com.example.chen.finder.objects.Post;
+import com.example.chen.finder.ui.Comment_ui;
 import com.example.chen.finder.util.HomeSetsViewAdapter;
+import com.example.chen.finder.viewhelper.CustomFontTextView;
+
 import java.util.Random;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -36,7 +39,10 @@ public class HomePostPagerActivity extends AppCompatActivity  {
     LinearLayout mFooterLinearLayout;
     @InjectView(R.id.nested_scrollView)
     NotifyingScrollView mNotifyingScrollView;
-
+    @InjectView(R.id.add_to_cart)
+    CustomFontTextView Madd_to_cart;
+    @InjectView(R.id.comment)
+    CustomFontTextView mComment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,22 +51,35 @@ public class HomePostPagerActivity extends AppCompatActivity  {
         intent = getIntent();
         Post post= getIntent().getParcelableExtra(HomeSetsViewAdapter.PAR_KEY);
 
-        final String post_tittle = post.title;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-
-
         ButterKnife.inject(this);
+        Madd_to_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePostPagerActivity.this, size_choose.class);
+                startActivity(intent);
+            }
+        });
 
+        mComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePostPagerActivity.this, Comment_ui.class);
+                startActivity(intent);
+            }
+        });
         SpeedyQuickReturnScrollViewOnScrollChangedListener scrollListener;
 
         scrollListener = new SpeedyQuickReturnScrollViewOnScrollChangedListener.Builder(this, QuickReturnViewType.FOOTER)
                 .footer(mFooterLinearLayout)
                 .build();
         mNotifyingScrollView.setOnScrollChangedListener(scrollListener);
+
+
     }
     private void loadBackdrop() {
         //final ImageView image1 = (ImageView) findViewById(R.id.pic_1);
@@ -113,7 +132,9 @@ public class HomePostPagerActivity extends AppCompatActivity  {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_add_to_cart) {
+            Intent intent = new Intent(this,size_choose.class);
+            startActivity(intent);
             return true;
         }
         else if (id== android.R.id.home){
