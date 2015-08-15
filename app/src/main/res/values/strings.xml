@@ -30,4 +30,6 @@
     <string name="title_activity_comment_ui">Comment_ui</string>
     <string name="title_activity_myaccountui">Myaccountui</string>
     <string name="title_activity_changepasswordui">Changepasswordui</string>
+    <string name="title_activity_likedsets">Likedsets</string>
+    <string name="title_activity_likedsetui">Likedsetui</string>
 </resources>

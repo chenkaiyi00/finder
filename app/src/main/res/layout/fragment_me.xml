@@ -2,17 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="com.example.chen.finder.ui.MeFragment">
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="vertical">
+          android:orientation="vertical"
+          android:weightSum="1">
       <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
     <ImageView
+
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -24,7 +23,8 @@
               android:layout_height="70dp"
               android:src="@drawable/product3"
               android:layout_centerHorizontal="true"
-              android:layout_marginTop="20dp"/>
+              android:layout_marginTop="20dp"
+              android:clickable="true"/>
     <com.example.chen.finder.viewhelper.CustomFontTextView
         android:id="@+id/user_name"
         android:layout_width="match_parent"
@@ -46,28 +46,44 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="vertical"
-          android:background="@drawable/shape_rectangle_background">
+          android:background="@drawable/shape_rectangle_background"
+          android:layout_weight="1">
           <com.example.chen.finder.viewhelper.CustomFontTextView
               android:id="@+id/My_loves_sets"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_below="@+id/user_name"
               android:layout_margin="10dp"
-              android:text="My loves"/>
+              android:clickable="true"
+              android:text="My loves"
+              android:textColor="@color/black"/>
           <com.example.chen.finder.viewhelper.CustomFontTextView
               android:id="@+id/My_sets"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_below="@+id/user_name"
               android:layout_margin="10dp"
-              android:text="My Sets"/>
+              android:clickable="true"
+              android:text="My Sets"
+              android:textColor="@color/black"/>
+          <com.example.chen.finder.viewhelper.CustomFontTextView
+              android:id="@+id/My_brands"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/user_name"
+              android:layout_margin="10dp"
+              android:clickable="true"
+              android:text="My Brands"
+              android:textColor="@color/black"/>
           <com.example.chen.finder.viewhelper.CustomFontTextView
               android:id="@+id/My_order"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_below="@+id/user_name"
               android:layout_margin="10dp"
-              android:text="Order"/>
+              android:clickable="true"
+              android:text="Order"
+              android:textColor="@color/black"/>
 
           <com.example.chen.finder.viewhelper.CustomFontTextView
               android:id="@+id/My_cart"
@@ -75,11 +91,13 @@
               android:layout_height="wrap_content"
               android:layout_below="@+id/user_name"
               android:layout_margin="10dp"
-              android:text="Shopping Cart"/>
+              android:clickable="true"
+              android:text="Shopping Cart"
+              android:textColor="@color/black"/>
 
       </LinearLayout>
       </LinearLayout>
-  </ScrollView>
+
 
 
 </FrameLayout>

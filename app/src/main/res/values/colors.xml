@@ -119,6 +119,7 @@
         <color name="light_blue_A400">#00b0ff</color>
         <color name="light_blue_A700">#0091ea</color>
 
+    <color name="transparent_cyan_50">#80e0f7fa</color>
         <color name="cyan_50">#e0f7fa</color>
         <color name="cyan_100">#b2ebf2</color>
         <color name="cyan_200">#80deea</color>
@@ -134,8 +135,8 @@
         <color name="cyan_A400">#00e5ff</color>
         <color name="cyan_A700">#00b8d4</color>
 
-        <color name="teal_50">#e0f2f1</color>
-        <color name="teal_100">#b2dfdb</color>
+        <color name="teal_50_transpanrent">#4De0f2f1</color>
+        <color name="teal_100">#4Db2dfdb</color>
         <color name="teal_200">#80cbc4</color>
         <color name="teal_300">#4db6ac</color>
         <color name="teal_400">#26a69a</color>
@@ -145,7 +146,7 @@
         <color name="teal_800">#00695c</color>
         <color name="teal_900">#004d40</color>
         <color name="teal_A100">#a7ffeb</color>
-        <color name="teal_A200">#64ffda</color>
+        <color name="teal_A200">#4D64ffda</color>
         <color name="teal_A400">#1de9b6</color>
         <color name="teal_A700">#00bfa5</color>
 

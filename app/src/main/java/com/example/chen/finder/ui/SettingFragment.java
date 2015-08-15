@@ -18,14 +18,7 @@ import com.example.chen.finder.viewhelper.CustomFontTextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link SettingFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link SettingFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class SettingFragment extends Fragment {
     @InjectView(R.id.my_account)
     CustomFontTextView mAccount;
